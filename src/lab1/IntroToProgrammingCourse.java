@@ -17,7 +17,5 @@ public class IntroToProgrammingCourse extends ProgrammingCourse{
         this.setCredits(credits);
     }
 
-
-
     
 }
