@@ -14,10 +14,13 @@ public class AdvancedJavaCourse implements ProgrammingCourse {
     private double credits;
     private String prerequisites;
 
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
+    public AdvancedJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
+        this.setPrerequisites(prerequisites);
     }
+
 
     public String getCourseNumber() {
         return courseNumber;

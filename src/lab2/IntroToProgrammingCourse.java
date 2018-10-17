@@ -13,9 +13,10 @@ public class IntroToProgrammingCourse implements ProgrammingCourse{
     private String courseNumber;
     private double credits;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
+    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
     public String getCourseNumber() {

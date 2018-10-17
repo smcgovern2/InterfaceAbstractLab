@@ -13,6 +13,9 @@ public class Startup {
         System.out.println(course3.getPrerequisites());
         System.out.println(((AdvancedJavaCourse) course1).getPrerequisites());
 
+        System.out.println(course1.getClass());
+        System.out.println(course2.getClass());
+        System.out.println(course3.getClass());
         /*
         The only advantage that i see in this method over interface inheritance is that time can be saved by not rewriting code.
         This method has much more opportunity for programmer error than interface inheritance.

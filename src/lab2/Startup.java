@@ -1,25 +1,26 @@
-//package lab2;
-//
-//public class Startup {
-//    public static void main(String[] args) {
-//        ProgrammingCourse course1 = new AdvancedJavaCourse("Advanced Java","300", "Intro to Java", 4.0);
-//        ProgrammingCourse course2 = new IntroToProgrammingCourse("Intro to Programming", "100", 3.0);
-//        IntroJavaCourse course3 = new IntroJavaCourse("Intro to Java", "200", "Intro to Programming", 3.0);
-//
-//        course1.setCredits(4.0);
-//        course2.setCredits(3.0);
-//        course3.setCredits(4.0);
-//
-//        System.out.println(course3.getPrerequisites());
-//        System.out.println(((AdvancedJavaCourse) course1).getPrerequisites());
-//
-//        /*
-//        The only advantage that i see in this method over interface inheritance is that time can be saved by not rewriting code.
-//        This method has much more opportunity for programmer error than interface inheritance.
-//
-//        As far as being able to declare a subclass as a superclass, i see no value in this capability for this particular assignment, but i understand how this can be
-//        very useful in other applications, e.g. maintaining a collection of courses to be iterated through, using additional code/classes to handle differences between sublasses
-//         */
-//
-//    }
-//}
+package lab2;
+
+import java.util.ArrayList;
+
+public class Startup {
+    public static void main(String[] args) {
+
+        ArrayList<ProgrammingCourse> courses = new ArrayList<>();
+
+        courses.add(new AdvancedJavaCourse("Advanced Java","300", 4.0, "Intro to Java"));
+        courses.add(new IntroToProgrammingCourse("Intro to Programming", "100", 3.0));
+        courses.add(new IntroJavaCourse("Intro to Java", "200", 3.0,"Intro to Programming"));
+
+        for ( ProgrammingCourse course : courses) {
+            System.out.printf("%S %s, %.2f credits\n",course.getCourseName(),course.getCourseNumber(),course.getCredits());
+
+        }
+        /*
+        Interface inheritance is safer than concrete inheritance, with the only real drawback being that common methods must be rewritten. This is generally a good trade-off
+        to make.
+
+        This startup class makes use of liskov substitution to access any ProgrammingCourse class within the for loop, however only methods included in the interface can be accessed
+        without writing additional logic.
+         */
+    }
+}

@@ -14,9 +14,11 @@ public class IntroJavaCourse implements ProgrammingCourse{
     private double credits;
     private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
+    public IntroJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
+        this.setPrerequisites(prerequisites);
     }
 
     public String getCourseNumber() {
