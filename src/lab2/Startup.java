@@ -19,8 +19,8 @@ public class Startup {
         Interface inheritance is safer than concrete inheritance, with the only real drawback being that common methods must be rewritten. This is generally a good trade-off
         to make.
 
-        This startup class makes use of liskov substitution to access any ProgrammingCourse class within the for loop, however only methods included in the interface can be accessed
-        without writing additional logic.
+        This startup class makes use of liskov substitution to access any ProgrammingCourse class within the foreach loop, however only methods included in the interface can be accessed
+        without writing additional logic. In this example, I cannot access the prerequisites field within the foreach loop as it does not exist in the interface.
          */
     }
 }
